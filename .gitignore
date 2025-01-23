@@ -1,0 +1,5 @@
+bin/
+bin/main
+.DS_Store
+odinfmt.json
+ols.json

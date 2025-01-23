@@ -1,0 +1,3 @@
+[submodule "libs/sokol-odin"]
+	path = libs/sokol-odin
+	url = https://github.com/ttoe/sokol-odin.git
