@@ -1,5 +1,7 @@
 ## Run
 
+*Tested only on macOS*
+
 `git clone --recursive` this repository.
 
 Build the libraries in `libs/sokol-odin/sokol` using the provided shell scripts.
