@@ -3,3 +3,4 @@ sokol-shdc --input shaders/sample-sdf.glsl --output src/sample-sdf/sample-sdf.gl
 
 odin build src/sample-rectangle -out:bin/sample-rectangle -use-separate-modules -show-timings -o:speed -linker:lld
 odin build src/sample-effect -out:bin/sample-effect -use-separate-modules -show-timings -o:speed -linker:lld
+odin build src/sample-sdf -out:bin/sample-sdf -use-separate-modules -show-timings -o:speed -linker:lld
