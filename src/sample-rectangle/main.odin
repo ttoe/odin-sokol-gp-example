@@ -1,14 +1,16 @@
 /*
- * Example taken from the sokol_gp README and ported to Odin:
- * https://github.com/edubart/sokol_gp/tree/master?tab=readme-ov-file#quick-usage-example
+ * Example taken from the sokol_gp and ported to Odin:
+ * https://github.com/edubart/sokol_gp.git
+ *
+ * This is an example on how to set up and use Sokol GP to draw a filled rectangle.
  */
 package main
 
-import sapp "../libs/sokol-odin/sokol/app"
-import sg "../libs/sokol-odin/sokol/gfx"
-import sglue "../libs/sokol-odin/sokol/glue"
-import sgp "../libs/sokol-odin/sokol/gp"
-import slog "../libs/sokol-odin/sokol/log"
+import sapp "../../libs/sokol-odin/sokol/app"
+import sg "../../libs/sokol-odin/sokol/gfx"
+import sglue "../../libs/sokol-odin/sokol/glue"
+import sgp "../../libs/sokol-odin/sokol/gp"
+import slog "../../libs/sokol-odin/sokol/log"
 import "core:math"
 
 frame :: proc "c" () {
@@ -65,7 +67,7 @@ main :: proc() {
 			init_cb = init,
 			frame_cb = frame,
 			cleanup_cb = cleanup,
-			window_title = "SOKOL GP EXAMPLE",
+			window_title = "SOKOL GP SAMPLE - RECTANGLE",
 			logger = {func = slog.func},
 		},
 	)
