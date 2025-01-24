@@ -1,5 +1,6 @@
 package main
 import sg "../../libs/sokol-odin/sokol/gfx"
+import sgp "../../libs/sokol-odin/sokol/gp"
 /*
     #version:1# (machine generated, don't edit!)
 
@@ -29,13 +30,13 @@ UB_vs_uniforms :: 0
 UB_fs_uniforms :: 1
 Vs_Uniforms :: struct #align(16) {
     using _: struct #packed {
-        iResolution: sgp_vec2,
+        iResolution: sgp.Vec2,
         _: [8]u8,
     },
 }
 Fs_Uniforms :: struct #align(16) {
     using _: struct #packed {
-        iTime: float,
+        iTime: f32,
         _: [12]u8,
     },
 }

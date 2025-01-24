@@ -1,8 +1,10 @@
+
 @header package main
 @header import sg "../../libs/sokol-odin/sokol/gfx"
+@header import sgp "../../libs/sokol-odin/sokol/gp"
 
-@ctype vec2 sgp_vec2
-@ctype float float
+@ctype vec2 sgp.Vec2
+@ctype float f32
 
 @vs vs
 layout(binding=0) uniform vs_uniforms {
