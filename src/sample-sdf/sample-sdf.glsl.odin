@@ -11,12 +11,12 @@ import sgp "../../libs/sokol-odin/sokol/gp"
 
     Overview:
     =========
-    Shader program: 'program':
-        Get shader desc: program_shader_desc(sg.query_backend())
+    Shader program: 'sample_sdf':
+        Get shader desc: sample_sdf_shader_desc(sg.query_backend())
         Vertex Shader: vs
         Fragment Shader: fs
         Attributes:
-            ATTR_program_coord => 0
+            ATTR_sample_sdf_coord => 0
     Bindings:
         Uniform block 'vs_uniforms':
             Odin struct: Vs_Uniforms
@@ -25,7 +25,7 @@ import sgp "../../libs/sokol-odin/sokol/gp"
             Odin struct: Fs_Uniforms
             Bind slot: UB_fs_uniforms => 1
 */
-ATTR_program_coord :: 0
+ATTR_sample_sdf_coord :: 0
 UB_vs_uniforms :: 0
 UB_fs_uniforms :: 1
 Vs_Uniforms :: struct #align(16) {
@@ -3543,9 +3543,9 @@ fs_source_metal_macos := [12712]u8 {
     0x30,0x29,0x3b,0x0a,0x20,0x20,0x20,0x20,0x72,0x65,0x74,0x75,0x72,0x6e,0x20,0x6f,
     0x75,0x74,0x3b,0x0a,0x7d,0x0a,0x0a,0x00,
 }
-program_shader_desc :: proc (backend: sg.Backend) -> sg.Shader_Desc {
+sample_sdf_shader_desc :: proc (backend: sg.Backend) -> sg.Shader_Desc {
     desc: sg.Shader_Desc
-    desc.label = "program_shader"
+    desc.label = "sample_sdf_shader"
     #partial switch backend {
     case .GLCORE:
         desc.vertex_func.source = transmute(cstring)&vs_source_glsl430

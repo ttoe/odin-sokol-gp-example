@@ -205,4 +205,4 @@ void main() {
 
 @end
 
-@program program vs fs
+@program sample_sdf vs fs
