@@ -7,7 +7,7 @@
 
 *Tested only on macOS*
 
-`git clone --recursive` this repository.
+Clone this repository: `git clone --recursive https://github.com/ttoe/odin-sokol-gp-example.git`.
 
 In the root directory `mkdir bin`.
 
