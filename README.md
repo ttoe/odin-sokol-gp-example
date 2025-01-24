@@ -1,7 +1,7 @@
 ## Dependencies
 
-- Sokol shader compiler: https://github.com/floooh/sokol-tools
-- Linker: lld. However, the linker flag in `build_all.sh` can also be removed.
+- `sokol-shdc` (https://github.com/floooh/sokol-tools)
+- `lld` (linker flag in `build_all.sh` can also be removed)
 
 ## Run
 
