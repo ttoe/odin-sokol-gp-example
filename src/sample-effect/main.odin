@@ -10,7 +10,6 @@ import sapp "../../libs/sokol-odin/sokol/app"
 import sg "../../libs/sokol-odin/sokol/gfx"
 import sglue "../../libs/sokol-odin/sokol/glue"
 import sgp "../../libs/sokol-odin/sokol/gp"
-
 import slog "../../libs/sokol-odin/sokol/log"
 import "base:runtime"
 import "core:os"
@@ -75,13 +74,10 @@ load_image :: proc(filename: string) -> sg.Image {
 	bytes, read_succes := os.read_entire_file_from_filename(filename)
 	assert(read_succes)
 
+	img: sg.Image
 	width, height, channels: i32
 	data := stbi.load_from_memory(raw_data(bytes), i32(len(bytes)), &width, &height, &channels, 4)
-	img: sg.Image
-
-	if data == nil {
-		return img
-	}
+	if data == nil {return img}
 
 	image_desc := sg.Image_Desc {
 		width = width,
